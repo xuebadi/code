@@ -3,91 +3,190 @@
     <picture>
       <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
       <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
-      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="学霸帝Code logo">
+      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="学霸帝Code Logo" width="400">
     </picture>
   </a>
 </p>
-<p align="center"><strong>中文 AI 编程助手 - 本地运行，数据安全</strong></p>
+
 <p align="center">
-  <a href="https://github.com/xuebadi/code/releases/latest"><img alt="GitHub release" src="https://img.shields.io/github/v/release/xuebadi/code?style=flat-square&label=最新版本" /></a>
-  <a href="https://github.com/xuebadi/code/discussions"><img alt="Discussions" src="https://img.shields.io/github/discussions/xuebadi/code?style=flat-square" /></a>
-  <a href="https://github.com/xuebadi/code/actions"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/xuebadi/code/publish.yml?style=flat-square&branch=dev" /></a>
+  <strong>中文 AI 编程助手 - 本地运行，数据安全</strong>
 </p>
 
 <p align="center">
-  <a href="README.md">English</a> |
-  <a href="README_CN.md">简体中文</a> |
-  <a href="README.zh.md">详细中文</a>
+  <a href="https://github.com/xuebadi/code/releases/latest">
+    <img alt="GitHub release" src="https://img.shields.io/github/v/release/xuebadi/code?style=flat-square&label=最新版本">
+  </a>
+  <a href="https://github.com/xuebadi/code/releases/download/v0.1.0/xuebadi-code-desktop-win-x64.exe">
+    <img alt="Windows下载" src="https://img.shields.io/badge/Windows-下载-blue?style=flat-square&logo=windows">
+  </a>
+  <a href="https://github.com/xuebadi/code/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/xuebadi/code?style=flat-square">
+  </a>
 </p>
 
-[![学霸帝Code Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://xuebadi-code.ai)
+<p align="center">
+  <a href="#安装">安装</a> •
+  <a href="#功能特性">功能特性</a> •
+  <a href="#支持的-llm">支持的 LLM</a> •
+  <a href="#构建">构建</a> •
+  <a href="#开源协议">开源协议</a>
+</p>
 
 ---
 
+## 学霸帝Code
+
+**学霸帝Code** 是基于 [OpenCode](https://github.com/anomalyco/opencode) 二次开发的中文 AI 编程助手。它能在本地运行，保护你的代码数据安全，支持多种主流 LLM 提供商。
+
+### ✨ 功能特性
+
+- 🤖 **智能代码补全** - 支持多种编程语言的智能代码建议
+- 💬 **自然语言编程** - 用中文描述需求，AI 自动生成代码
+- 🔧 **代码重构** - 智能优化代码结构和性能
+- 📖 **代码解释** - 帮助理解复杂代码逻辑
+- 🐛 **Bug 修复** - 自动检测和修复代码问题
+- 🔒 **本地运行** - 数据不出本地，安全可控
+- 🌐 **多 LLM 支持** - 支持 OpenAI、Anthropic、Google、阿里通义、百度文心等
+
+### 📥 安装
+
+#### Windows 桌面版
+
+直接下载安装包：
+
+```powershell
+# 下载最新版本
+https://github.com/xuebadi/code/releases/latest
 ```
 
-> [!TIP]
-> 安装前请先卸载 0.1.x 之前的旧版本。
-
-### 桌面应用 (BETA)
-
-学霸帝Code 提供桌面版应用。直接从 [发布页面](https://github.com/xuebadi/code/releases) 下载。
-
-| 平台                  | 下载文件                           |
-| --------------------- | ---------------------------------- |
-| macOS (Apple Silicon) | `xuebadi-code-desktop-mac-arm64.dmg`   |
-| macOS (Intel)         | `xuebadi-code-desktop-mac-x64.dmg`     |
-| Windows               | `xuebadi-code-desktop-win-x64.exe`     |
-| Linux                 | `.deb`, `.rpm`, 或 `.AppImage`     |
+或使用命令行：
 
 ```bash
-# macOS (Homebrew)
-brew install --cask xuebadi-code-desktop
-# Windows (Scoop)
-scoop bucket add extras; scoop install extras/xuebadi-code-desktop
+# 使用 npm
+npm install -g opencode-ai@latest
+
+# 使用 bun
+bun install -g opencode-ai@latest
+
+# 使用 scoop (Windows)
+scoop install opencode
 ```
 
-#### 安装目录
-
-安装脚本按以下优先级选择安装路径：
-
-1. `$OPENCODE_INSTALL_DIR` - 自定义安装目录
-2. `$XDG_BIN_DIR` - XDG 标准路径
-3. `$HOME/bin` - 用户二进制目录（如存在）
-4. `$HOME/.opencode/bin` - 默认备用
+#### macOS
 
 ```bash
-# 示例
-OPENCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://xuebadi-code.ai/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://xuebadi-code.ai/install | bash
+# Homebrew
+brew install anomalyco/tap/opencode
 ```
 
-### Agents（智能代理）
+#### Linux
 
-学霸帝Code 内置两种 Agent，用 `Tab` 键切换：
+```bash
+# Arch Linux
+sudo pacman -S opencode
 
-- **build** - 默认模式，完整权限，适合开发
-- **plan** - 只读模式，适合代码分析和规划
-  - 默认拒绝文件修改
-  - 运行 bash 命令前会询问权限
-  - 适合探索陌生代码库或规划改动
+# AUR
+paru -S opencode-bin
 
-另外还包含 **general** 子 Agent，用于复杂搜索和多步任务。可在消息中用 `@general` 调用。
+# 通用安装脚本
+curl -fsSL https://xuebadi-code.ai/install | bash
+```
 
-了解更多 [Agents 文档](https://xuebadi-code.ai/docs/agents)。
+### 🎯 快速开始
 
-### 文档
+1. **启动应用**
+   ```bash
+   # 命令行启动
+   xuebadi-code
+   
+   # 或在应用菜单中找到"学霸帝Code"
+   ```
 
-更多配置说明请查看 [**官方文档**](https://xuebadi-code.ai/docs)。
+2. **配置 LLM 提供商**
+   - 打开设置 (Ctrl+, / Cmd+,)
+   - 选择你喜欢的 LLM 提供商
+   - 输入 API Key
 
-### 参与贡献
+3. **开始编程**
+   - 在对话框输入自然语言描述
+   - AI 会自动生成代码或修改建议
 
-欢迎贡献代码！提交 PR 前请阅读 [贡献指南](./CONTRIBUTING.md)。
+### 🤖 支持的 LLM
 
-### 基于 学霸帝Code 开发
+| 提供商 | 模型 | 说明 |
+|--------|------|------|
+| OpenAI | GPT-4, GPT-4o | 需要 API Key |
+| Anthropic | Claude 3.5/4 | 需要_API Key |
+| Google | Gemini Pro | 需要 API Key |
+| 阿里云 | 通义千问 | 需要 API Key |
+| 百度 | 文心一言 | 需要 API Key |
+| DeepSeek | DeepSeek V3/R1 | 需要 API Key |
+| Ollama | 本地模型 | 无需 API Key |
 
-如果你在开发与学霸帝Code相关的项目，并在项目名中使用了 "xuebadi-code" 或 "opencode"，请在 README 中注明该项目非官方开发，与学霸帝Code团队无隶属关系。
+### 🏗️ 构建
+
+#### 环境要求
+
+- Node.js 18+ 或 Bun 1.3.14+
+- Git
+- Windows: Visual Studio Build Tools (可选)
+
+#### 构建步骤
+
+```bash
+# 克隆仓库
+git clone https://github.com/xuebadi/code.git
+cd code
+
+# 安装依赖
+bun install
+
+# 构建桌面应用
+cd packages/desktop
+bun run build
+
+# 打包 Windows 安装包
+bun run package:win
+
+# 产物位置
+# packages/desktop/dist/xuebadi-code-desktop-win-x64.exe
+```
+
+### 📝 开发
+
+```bash
+# 开发模式
+cd packages/desktop
+bun run dev
+
+# 运行测试
+bun test
+
+# 类型检查
+bun run typecheck
+```
+
+### 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 创建 Pull Request
+
+### 📄 开源协议
+
+本项目基于 MIT 协议开源，详见 [LICENSE](LICENSE) 文件。
+
+### 🙏 致谢
+
+- 感谢 [OpenCode](https://github.com/anomalyco/opencode) 团队的开源贡献
+- 感谢所有贡献者的付出
 
 ---
 
-**加入社区** [GitHub Discussions](https://github.com/xuebadi/code/discussions) | [Issues](https://github.com/xuebadi/code/issues)
+<p align="center">
+  Made with ❤️ by 学霸帝团队
+</p>
