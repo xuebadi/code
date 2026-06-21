@@ -24,17 +24,6 @@
 
 ---
 
-### 安装
-
-```bash
-# YOLO 风格一键安装
-curl -fsSL https://xuebadi-code.ai/install | bash
-
-# 包管理器安装
-npm i -g opencode-ai@latest        # 或 bun/pnpm/yarn
-scoop install opencode             # Windows
-choco install opencode             # Windows
-brew install anomalyco/tap/opencode # macOS 和 Linux (推荐，始终最新)
 ```
 
 > [!TIP]
