@@ -13,9 +13,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/xuebadi/code/releases/latest">
-    <img alt="GitHub release" src="https://img.shields.io/github/v/release/xuebadi/code?style=flat-square&label=最新版本">
-  </a>
   <a href="https://github.com/xuebadi/code/releases/download/v0.1.0/xuebadi-code-desktop-win-x64.exe">
     <img alt="Windows下载" src="https://img.shields.io/badge/Windows-下载-blue?style=flat-square&logo=windows">
   </a>
