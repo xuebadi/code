@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://xuebadi-code.ai">
+  <a href="https://github.com/xuebadi/code">
     <picture>
       <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
       <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
@@ -7,73 +7,49 @@
     </picture>
   </a>
 </p>
-<p align="center">The open source AI coding agent.</p>
+<p align="center"><strong>中文 AI 编程助手 - 本地运行，数据安全</strong></p>
 <p align="center">
-  <a href="https://xuebadi-code.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/opencode-ai"><img alt="npm" src="https://img.shields.io/npm/v/opencode-ai?style=flat-square" /></a>
-  <a href="https://github.com/anomalyco/opencode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/opencode/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://github.com/xuebadi/code/releases/latest"><img alt="GitHub release" src="https://img.shields.io/github/v/release/xuebadi/code?style=flat-square&label=最新版本" /></a>
+  <a href="https://github.com/xuebadi/code/discussions"><img alt="Discussions" src="https://img.shields.io/github/discussions/xuebadi/code?style=flat-square" /></a>
+  <a href="https://github.com/xuebadi/code/actions"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/xuebadi/code/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
   <a href="README.md">English</a> |
-  <a href="README.zh.md">简体中文</a> |
-  <a href="README.zht.md">繁體中文</a> |
-  <a href="README.ko.md">한국어</a> |
-  <a href="README.de.md">Deutsch</a> |
-  <a href="README.es.md">Español</a> |
-  <a href="README.fr.md">Français</a> |
-  <a href="README.it.md">Italiano</a> |
-  <a href="README.da.md">Dansk</a> |
-  <a href="README.ja.md">日本語</a> |
-  <a href="README.pl.md">Polski</a> |
-  <a href="README.ru.md">Русский</a> |
-  <a href="README.bs.md">Bosanski</a> |
-  <a href="README.ar.md">العربية</a> |
-  <a href="README.no.md">Norsk</a> |
-  <a href="README.br.md">Português (Brasil)</a> |
-  <a href="README.th.md">ไทย</a> |
-  <a href="README.tr.md">Türkçe</a> |
-  <a href="README.uk.md">Українська</a> |
-  <a href="README.bn.md">বাংলা</a> |
-  <a href="README.gr.md">Ελληνικά</a> |
-  <a href="README.vi.md">Tiếng Việt</a>
+  <a href="README_CN.md">简体中文</a> |
+  <a href="README.zh.md">详细中文</a>
 </p>
 
 [![学霸帝Code Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://xuebadi-code.ai)
 
 ---
 
-### Installation
+### 安装
 
 ```bash
-# YOLO
+# YOLO 风格一键安装
 curl -fsSL https://xuebadi-code.ai/install | bash
 
-# Package managers
-npm i -g opencode-ai@latest        # or bun/pnpm/yarn
+# 包管理器安装
+npm i -g opencode-ai@latest        # 或 bun/pnpm/yarn
 scoop install opencode             # Windows
 choco install opencode             # Windows
-brew install anomalyco/tap/opencode # macOS and Linux (recommended, always up to date)
-brew install opencode              # macOS and Linux (official brew formula, updated less)
-sudo pacman -S opencode            # Arch Linux (Stable)
-paru -S opencode-bin               # Arch Linux (Latest from AUR)
-mise use -g opencode               # Any OS
-nix run nixpkgs#opencode           # or github:anomalyco/opencode for latest dev branch
+brew install anomalyco/tap/opencode # macOS 和 Linux (推荐，始终最新)
 ```
 
 > [!TIP]
-> Remove versions older than 0.1.x before installing.
+> 安装前请先卸载 0.1.x 之前的旧版本。
 
-### Desktop App (BETA)
+### 桌面应用 (BETA)
 
-OpenCode is also available as a desktop application. Download directly from the [releases page](https://github.com/anomalyco/opencode/releases) or [opencode.ai/download](https://opencode.ai/download).
+学霸帝Code 提供桌面版应用。直接从 [发布页面](https://github.com/xuebadi/code/releases) 下载。
 
-| Platform              | Download                           |
+| 平台                  | 下载文件                           |
 | --------------------- | ---------------------------------- |
 | macOS (Apple Silicon) | `xuebadi-code-desktop-mac-arm64.dmg`   |
 | macOS (Intel)         | `xuebadi-code-desktop-mac-x64.dmg`     |
-| Windows               | `xuebadi-code-desktop-windows-x64.exe` |
-| Linux                 | `.deb`, `.rpm`, or `.AppImage`     |
+| Windows               | `xuebadi-code-desktop-win-x64.exe`     |
+| Linux                 | `.deb`, `.rpm`, 或 `.AppImage`     |
 
 ```bash
 # macOS (Homebrew)
@@ -82,48 +58,47 @@ brew install --cask xuebadi-code-desktop
 scoop bucket add extras; scoop install extras/xuebadi-code-desktop
 ```
 
-#### Installation Directory
+#### 安装目录
 
-The install script respects the following priority order for the installation path:
+安装脚本按以下优先级选择安装路径：
 
-1. `$OPENCODE_INSTALL_DIR` - Custom installation directory
-2. `$XDG_BIN_DIR` - XDG Base Directory Specification compliant path
-3. `$HOME/bin` - Standard user binary directory (if it exists or can be created)
-4. `$HOME/.opencode/bin` - Default fallback
+1. `$OPENCODE_INSTALL_DIR` - 自定义安装目录
+2. `$XDG_BIN_DIR` - XDG 标准路径
+3. `$HOME/bin` - 用户二进制目录（如存在）
+4. `$HOME/.opencode/bin` - 默认备用
 
 ```bash
-# Examples
+# 示例
 OPENCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://xuebadi-code.ai/install | bash
 XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://xuebadi-code.ai/install | bash
 ```
 
-### Agents
+### Agents（智能代理）
 
-学霸帝Code includes two built-in agents you can switch between with the `Tab` key.
+学霸帝Code 内置两种 Agent，用 `Tab` 键切换：
 
-- **build** - Default, full-access agent for development work
-- **plan** - Read-only agent for analysis and code exploration
-  - Denies file edits by default
-  - Asks permission before running bash commands
-  - Ideal for exploring unfamiliar codebases or planning changes
+- **build** - 默认模式，完整权限，适合开发
+- **plan** - 只读模式，适合代码分析和规划
+  - 默认拒绝文件修改
+  - 运行 bash 命令前会询问权限
+  - 适合探索陌生代码库或规划改动
 
-Also included is a **general** subagent for complex searches and multistep tasks.
-This is used internally and can be invoked using `@general` in messages.
+另外还包含 **general** 子 Agent，用于复杂搜索和多步任务。可在消息中用 `@general` 调用。
 
-Learn more about [agents](https://xuebadi-code.ai/docs/agents).
+了解更多 [Agents 文档](https://xuebadi-code.ai/docs/agents)。
 
-### Documentation
+### 文档
 
-For more info on how to configure 学霸帝Code, [**head over to our docs**](https://xuebadi-code.ai/docs).
+更多配置说明请查看 [**官方文档**](https://xuebadi-code.ai/docs)。
 
-### Contributing
+### 参与贡献
 
-If you're interested in contributing to 学霸帝Code, please read our [contributing docs](./CONTRIBUTING.md) before submitting a pull request.
+欢迎贡献代码！提交 PR 前请阅读 [贡献指南](./CONTRIBUTING.md)。
 
-### Building on 学霸帝Code
+### 基于 学霸帝Code 开发
 
-If you are working on a project that's related to 学霸帝Code and is using "opencode" as part of its name, for example "opencode-dashboard" or "opencode-mobile", please add a note to your README to clarify that it is not built by the 学霸帝Code team and is not affiliated with us in any way.
+如果你在开发与学霸帝Code相关的项目，并在项目名中使用了 "xuebadi-code" 或 "opencode"，请在 README 中注明该项目非官方开发，与学霸帝Code团队无隶属关系。
 
 ---
 
-**Join our community** [Discord](https://discord.gg/opencode) | [X.com](https://x.com/opencode)
+**加入社区** [GitHub Discussions](https://github.com/xuebadi/code/discussions) | [Issues](https://github.com/xuebadi/code/issues)
