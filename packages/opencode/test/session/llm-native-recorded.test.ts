@@ -29,7 +29,7 @@ import { ModelV2 } from "@opencode-ai/core/model"
 
 const FIXTURES_DIR = path.join(import.meta.dir, "../fixtures/recordings")
 
-const zenURL = (connection: string) => `https://console.opencode.ai/proxy/connections/${connection}/v1`
+const zenURL = (connection: string) => `https://console.xuebadi-code.ai/proxy/connections/${connection}/v1`
 
 const replayOpenAIOAuth = {
   type: "oauth",
@@ -161,7 +161,7 @@ const RECORDED_SCENARIOS = [
   },
   {
     id: "opencode-proxy",
-    name: "OpenCode proxy",
+    name: "学霸帝Code proxy",
     providerID: ProviderV2.ID.opencode,
     modelID: "gpt-5.2-codex",
     cassette: "session/native-zen-tool-loop",
@@ -171,7 +171,7 @@ const RECORDED_SCENARIOS = [
     config: (model) =>
       providerConfig({
         providerID: ProviderV2.ID.opencode,
-        name: "OpenCode Zen",
+        name: "学霸帝Code Zen",
         env: ["OPENCODE_CONSOLE_TOKEN"],
         npm: "@ai-sdk/openai-compatible",
         api: zenURL(process.env.OPENCODE_RECORD_ZEN_CONNECTION ?? "fixture"),
@@ -311,7 +311,7 @@ const writeConfig = (directory: string, scenario: RecordedScenario, model: Model
   Effect.promise(() =>
     Bun.write(
       path.join(directory, "opencode.json"),
-      JSON.stringify({ $schema: "https://opencode.ai/config.json", ...scenario.config(model) }),
+      JSON.stringify({ $schema: "https://xuebadi-code.ai/config.json", ...scenario.config(model) }),
     ),
   )
 

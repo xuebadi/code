@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=OpenCode
-Exec=/opt/OpenCode/ai.opencode.desktop %U
+Name=学霸帝Code
+Exec=/opt/学霸帝Code/com.xuebadi.code %U
 Terminal=false
 Type=Application
-Icon=ai.opencode.desktop
-StartupWMClass=ai.opencode.desktop
+Icon=com.xuebadi.code
+StartupWMClass=com.xuebadi.code
 NoDisplay=true
 Comment=Open source AI coding agent
 Categories=Development;

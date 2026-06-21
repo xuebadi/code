@@ -4,10 +4,11 @@
   "version": "1.17.9",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://opencode.ai",
+  "description": "AI-powered coding assistant - 学霸帝Code",
+  "homepage": "https://xuebadi-code.ai",
   "author": {
-    "name": "OpenCode",
-    "email": "hello@opencode.ai"
+    "name": "学霸帝Code",
+    "email": "hello@xuebadi-code.ai"
   },
   "scripts": {
     "typecheck": "tsgo -b",

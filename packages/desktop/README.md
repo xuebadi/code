@@ -1,6 +1,6 @@
-# OpenCode Desktop
+# 学霸帝Code Desktop
 
-The OpenCode Desktop app, built with Electron.
+The 学霸帝Code Desktop app, built with Electron.
 
 ## Development
 

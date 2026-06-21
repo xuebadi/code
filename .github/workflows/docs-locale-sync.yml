@@ -48,11 +48,11 @@ jobs:
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Install OpenCode
+      - name: Install 学霸帝Code
         if: steps.changes.outputs.has_changes == 'true'
-        run: curl -fsSL https://opencode.ai/install | bash
+        run: curl -fsSL https://xuebadi-code.ai/install | bash
 
-      - name: Sync locale docs with OpenCode
+      - name: Sync locale docs with 学霸帝Code
         if: steps.changes.outputs.has_changes == 'true'
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}

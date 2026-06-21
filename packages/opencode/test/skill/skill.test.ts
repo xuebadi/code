@@ -499,7 +499,7 @@ name: opencode-skill
 description: A skill in the .opencode/skill directory.
 ---
 
-# OpenCode Skill
+# 学霸帝Code Skill
 `,
               ),
             ]),
@@ -546,7 +546,7 @@ name: opencode-skill
 description: A skill in the .opencode/skill directory.
 ---
 
-# OpenCode Skill
+# 学霸帝Code Skill
 `,
               ),
               Bun.write(
@@ -556,7 +556,7 @@ name: opencode-skill
 description: A skill in the .opencode/skills directory.
 ---
 
-# OpenCode Skill
+# 学霸帝Code Skill
 `,
               ),
             ]),

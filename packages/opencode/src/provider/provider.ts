@@ -445,7 +445,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://xuebadi-code.ai/",
             "X-Title": "opencode",
             "X-Source": "opencode",
           },
@@ -456,7 +456,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://xuebadi-code.ai/",
             "X-Title": "opencode",
           },
         },
@@ -466,9 +466,9 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: provider.source === "config",
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://xuebadi-code.ai/",
             "X-Title": "opencode",
-            "X-BILLING-INVOKE-ORIGIN": "OpenCode",
+            "X-BILLING-INVOKE-ORIGIN": "学霸帝Code",
           },
         },
       }),
@@ -477,7 +477,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "http-referer": "https://opencode.ai/",
+            "http-referer": "https://xuebadi-code.ai/",
             "x-title": "opencode",
           },
         },
@@ -583,7 +583,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://xuebadi-code.ai/",
             "X-Title": "opencode",
           },
         },
@@ -841,7 +841,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
         autoload: false,
         options: {
           headers: {
-            "HTTP-Referer": "https://opencode.ai/",
+            "HTTP-Referer": "https://xuebadi-code.ai/",
             "X-Title": "opencode",
           },
         },

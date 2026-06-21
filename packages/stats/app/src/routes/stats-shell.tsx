@@ -18,7 +18,7 @@ export const githubLink = {
   apiHref: "https://api.github.com/repos/anomalyco/opencode",
   label: "GitHub",
   fallbackStars: "150K",
-  ariaLabel: "Star OpenCode on GitHub",
+  ariaLabel: "Star 学霸帝Code on GitHub",
 }
 export const themePreferences = ["dark", "light", "system"] as const
 export const themeStorageKey = "opencode:stats-theme"
@@ -127,8 +127,8 @@ export function Header(props: { githubStars: string; links?: readonly HeaderLink
             <strong>{githubLink.label}</strong>
             <span>[{props.githubStars}]</span>
           </a>
-          <a data-slot="header-button" data-variant="contrast" href="https://opencode.ai/">
-            <strong>Try OpenCode</strong>
+          <a data-slot="header-button" data-variant="contrast" href="https://xuebadi-code.ai/">
+            <strong>Try 学霸帝Code</strong>
           </a>
           <button
             data-slot="menu-button"
@@ -218,12 +218,12 @@ export function Footer(props: {
     { href: "#geo-breakdown", label: "Geo Breakdown" },
   ]
   const legal = [
-    { href: "https://opencode.ai/legal/terms-of-service", label: "Terms of service" },
-    { href: "https://opencode.ai/legal/privacy-policy", label: "Privacy policy" },
+    { href: "https://xuebadi-code.ai/legal/terms-of-service", label: "Terms of service" },
+    { href: "https://xuebadi-code.ai/legal/privacy-policy", label: "Privacy policy" },
   ]
   const connect = [
-    { href: "mailto:hello@opencode.ai", label: "Contact us" },
-    { href: "https://opencode.ai/discord", label: "Community" },
+    { href: "mailto:hello@xuebadi-code.ai", label: "Contact us" },
+    { href: "https://xuebadi-code.ai/discord", label: "Community" },
     { href: "https://x.com/opencode", label: "X" },
     githubLink,
     { href: "https://www.youtube.com/@anomaly-co", label: "YouTube" },
@@ -233,7 +233,7 @@ export function Footer(props: {
     <footer data-component="footer">
       <SectionBridge label="GEO BREAKDOWN" href="#geo-breakdown" />
       <div data-slot="footer-grid">
-        <a data-slot="footer-mark" href="https://opencode.ai" aria-label="OpenCode home">
+        <a data-slot="footer-mark" href="https://xuebadi-code.ai" aria-label="学霸帝Code home">
           <OpenCodeMark />
         </a>
         <FooterColumn title="Model Data" links={modelStats} />
@@ -385,7 +385,7 @@ function SubscribeModal(props: { onClose: () => void }) {
       <div data-slot="modal-scrim" aria-hidden="true" onClick={props.onClose} />
       <div data-slot="modal-panel">
         <div data-slot="modal-brand">
-          <img data-slot="modal-logo" src={opencodeWordmarkDark} alt="OpenCode" />
+          <img data-slot="modal-logo" src={opencodeWordmarkDark} alt="学霸帝Code" />
           <button data-slot="modal-close" type="button" aria-label="Close newsletter signup" onClick={props.onClose}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M4.44 4.44L11.56 11.56M11.56 4.44L4.44 11.56" stroke="currentColor" />
@@ -394,7 +394,7 @@ function SubscribeModal(props: { onClose: () => void }) {
         </div>
         <div data-slot="modal-body">
           <div data-slot="modal-intro">
-            <h2 id="subscribe-title">OpenCode Newsletter</h2>
+            <h2 id="subscribe-title">学霸帝Code Newsletter</h2>
             <p>
               Be the first to know
               <br />
