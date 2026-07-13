@@ -1,10 +1,5 @@
 <p align="center">
   <a href="https://github.com/xuebadi/code">
-    <picture>
-      <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
-      <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
-      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="学霸帝Code Logo" width="400">
-    </picture>
   </a>
 </p>
 
